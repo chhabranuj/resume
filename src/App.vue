@@ -5,6 +5,9 @@
       <AboutMe />
       <hr class='divider'>
       <ProfessionalExperience />
+      <hr class='divider'>
+      <Education />
+      <hr class='divider'>
     </div>
   </div>
 </template>
@@ -13,6 +16,8 @@
   import Header from './components/Header.vue';
   import AboutMe from './components/AboutMe.vue';
   import ProfessionalExperience from './components/ProfessionalExperience.vue';
+  import Education from './components/Education.vue';
+  import Skills from './components/Skills.vue';
 
   export default {
     name: 'App',
@@ -20,6 +25,8 @@
       Header,
       AboutMe,
       ProfessionalExperience,
+      Education,
+      Skills,
     },
   }
 </script>
@@ -49,6 +56,7 @@
     }
     .contents {
       width: 100%;
+      height: auto;
     }
     .divider {
       width: 100%;

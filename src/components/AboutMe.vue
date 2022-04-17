@@ -15,10 +15,10 @@
         </div>
         <p class='about'>{{about}}</p>
         <div class='externalLinks'>
-            <a href='https://github.com/chhabranuj' target="_blank"><md-icon class='fa fa-github link'></md-icon></a>
-            <a href='https://www.linkedin.com/in/anuj-chhabra-b0b2a422a' target="_blank"><md-icon class='fa fa-linkedin link' style='color:#71c6dd'></md-icon></a>
-            <a href='https://pendownonpaper.netlify.app' target="_blank"><md-icon class='fa fa-globe link'></md-icon></a>
-            <a href='https://wa.me/+917217746275' target="_blank"><md-icon class='fa fa-whatsapp link' style='color:#71c6dd'></md-icon></a>
+            <a :href='`${github}`' target="_blank"><md-icon class='fa fa-github link'></md-icon></a>
+            <a :href='`${linkedin}`' target="_blank"><md-icon class='fa fa-linkedin link' style='color:#71c6dd'></md-icon></a>
+            <a :href='`${website}`' target="_blank"><md-icon class='fa fa-globe link'></md-icon></a>
+            <a :href='`${whatsapp}`' target="_blank"><md-icon class='fa fa-whatsapp link' style='color:#71c6dd'></md-icon></a>
         </div>
     </div>
 </template>
@@ -41,7 +41,7 @@
                 website: 'https://pendownonpaper.netlify.app',
                 whatsapp: 'https://wa.me/+917217746275',
                 toUppercase(value) {
-                    return value.toUpperCase()
+                    return value.toUpperCase();
                 },
             }
         },
@@ -91,7 +91,11 @@
         color: white;
     }
 
-     @media screen and (max-width:900px) {
+     @media screen and (max-width: 900px) {
+        .aboutMe {
+            padding: 25% 0;
+            height: auto;
+        }
         .title {
             font-size: 70px;
         }
