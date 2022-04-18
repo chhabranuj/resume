@@ -8,6 +8,8 @@
       <hr class='divider'>
       <Education />
       <hr class='divider'>
+      <Skills />
+      <hr class='divider'>
     </div>
   </div>
 </template>
@@ -18,6 +20,7 @@
   import ProfessionalExperience from './components/ProfessionalExperience.vue';
   import Education from './components/Education.vue';
   import Skills from './components/Skills.vue';
+  import Achievements from './components/Achievements.vue';
 
   export default {
     name: 'App',
@@ -27,6 +30,7 @@
       ProfessionalExperience,
       Education,
       Skills,
+      Achievements,
     },
   }
 </script>

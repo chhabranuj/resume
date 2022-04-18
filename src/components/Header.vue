@@ -10,7 +10,7 @@
             <md-icon class='fa fa-bars menu' v-on:click='toggleMenu()'></md-icon>
         </div>
         <div class='mediaContents' v-if='menuIsOpen'>
-            <p class='mediaContent contents' v-for='item in content' :key="item">{{item}}</p>
+            <p class='mediaContent contents' v-for='item in content' :key='item'>{{item}}</p>
         </div>
     </div>
 </template>
@@ -44,7 +44,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 250px;
+        width: 300px;
         height: 100vh;
         background-color: #51546e;
     }

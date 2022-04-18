@@ -59,7 +59,7 @@
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
-        height: 100vh;
+        min-height: 100vh;
         margin: 0 5%;
         color: white;
     }
@@ -91,13 +91,13 @@
         color: white;
     }
 
-     @media screen and (max-width: 900px) {
+    @media screen and (max-width: 900px) {
         .aboutMe {
             padding: 25% 0;
-            height: auto;
+            min-height: auto;
         }
         .title {
-            font-size: 70px;
+            font-size: 60px;
         }
         .personalInfo {
             font-size: 15px;

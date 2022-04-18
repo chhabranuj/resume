@@ -40,7 +40,7 @@
         align-items: flex-start;
         flex-direction: column;
         margin: 0 5%;
-        height: 100vh;
+        min-height: 100vh;
         color: white;
     }
     .title {
@@ -79,7 +79,7 @@
     @media screen and (max-width: 900px) {
         .education {
             padding: 25% 0;
-            height: auto;
+            min-height: auto;
         }
         .title {
             font-size: 35px;
