@@ -75,6 +75,7 @@
         letter-spacing: 1px;
         font-weight: bold;
         font-size: 15px;
+        width: 75%;
     }
     @media screen and (max-width: 900px) {
         .education {

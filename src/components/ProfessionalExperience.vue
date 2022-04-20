@@ -31,11 +31,13 @@
                         'Actively taken part in critical situations like war-rooms and priority incidents.',
                         'Saved company a fortune and resolved a critical security threat, by submitting a bright idea every year.'
                 ],
-                toUppercase(value) {
-                    return value.toUpperCase();
-                }
             }
         },
+        methods: {
+            toUppercase(value) {
+                return value.toUpperCase();
+            },
+        }
     }
 </script>
 
