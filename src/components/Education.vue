@@ -93,5 +93,8 @@
         .college {
             font-size: 22px;
         }
+        .about {
+            width: 100%;
+        }
     }
 </style>

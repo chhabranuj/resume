@@ -1,5 +1,5 @@
 <template>
-    <div class='achievements'>
+    <div class='achievements' v-bind:class='getMobileHeightClass(data.title)'>
         <p v-bind:class='getTitleClass(data.title)'>{{toUppercase(data.title)}}</p>
         <div class='awards'  v-for='item in data.achievements' :key='item.description'>
             <div class='titleAndYear'>
@@ -53,7 +53,16 @@
                 else {
                     return 'awardTitle whiteTitle'
                 }
+            },
+            getMobileHeightClass(value) {
+                if(value == 'achievements') {
+                    return 'achievements'
+                }
+                else {
+                    return 'achievements mobileHeight'
+                }
             }
+
         }
     }
 </script>
@@ -67,7 +76,7 @@
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
-        margin: 0 5%;
+        margin: 5%;
         min-height: 100vh;
         color: white;
     }
@@ -120,6 +129,9 @@
         .achievements {
             min-height: auto;
             padding: 25% 0;
+        }
+        .mobileHeight {
+            padding-bottom: 15%;
         }
         .title {
             font-size: 35px;

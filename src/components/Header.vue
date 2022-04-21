@@ -2,16 +2,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div class='header'>
         <img src='./../assets/anuj.jpeg' class='image'/>
-        <p class='contents' v-for='item in content' :key='item'>{{item}}</p>
+        <p v-for='item in content' :key='item' @click='getItemName(item)' v-bind:class='getClass(item)'>{{item}}</p>
     </div>
     <div class='mediaHeader'>
         <div class='mediaTitleAndMenu'>
             <p class='title'><span style='color: #71c6dd'>{{firstName}}</span> {{lastName}} </p>
-            <md-icon class='fa fa-bars menu' v-on:click='toggleMenu()'></md-icon>
+            <md-icon class='fa fa-bars menu' @click='toggleMenu()'></md-icon>
         </div>
-        <div class='mediaContents' v-if='menuIsOpen'>
-            <p class='mediaContent contents' v-for='item in content' :key='item'>{{item}}</p>
-        </div>
+        <transition name='fade'>
+            <div class='mediaContents' v-if='menuIsOpen'>
+                <p class='mediaContent contents' v-for='item in content' :key='item' @click='getItemName(item)' v-bind:class='getClass(item)'>{{item}}</p>
+            </div>
+        </transition>
     </div>
 </template>
 
@@ -20,6 +22,7 @@
         name: 'Header',
         data() {
             return {
+                clicked: 'ABOUT ME',
                 firstName: 'Anuj',
                 lastName: 'Chhabra',
                 content: ['ABOUT ME', 'PROFESSIONAL \n EXPERIENCE', 'EDUCATION', 'SKILLS', 'ACHIEVEMENTS', 'HACKATHON'],
@@ -29,7 +32,20 @@
         methods: {
             toggleMenu() {
                 this.menuIsOpen = !this.menuIsOpen;
-            }
+            },
+            getItemName(value) {
+                this.$emit('clicked', value);
+                this.clicked = value;
+                this.menuIsOpen = false;
+            },
+            getClass(value) {
+                if(value == this.clicked) {
+                    return 'mediaContent contents whiteTitle';
+                }
+                else {
+                    return 'mediaContent contents';
+                }
+            },
         }
     }
 </script>
@@ -66,7 +82,9 @@
     .contents:hover {
         color: white;
     }
-
+    .whiteTitle {
+        color: white;
+    }
     @media screen and (max-width: 900px) {
         .header {
             display: none;
@@ -111,6 +129,32 @@
         .mediaContent {
             text-align: start;
             margin: 10px 0;
+        }
+        .fade-enter {
+        }
+        .fade-enter-active {
+            animation: fade-in 1s;
+        }
+        .fade-leave {
+        }
+        .fade-leave-active {
+            animation: fade-out 0.5s;
+        }
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
         }
     }
 </style>

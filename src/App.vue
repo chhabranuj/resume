@@ -1,18 +1,18 @@
 <template>
-<div class='app'>
-    <Header />
+<div id='app'>
+    <Header @clicked='getItemName' />
     <div class='contents'>
-      <AboutMe />
+      <AboutMe class='ABOUT ME'/>
       <hr class='divider'>
-      <ProfessionalExperience />
+      <ProfessionalExperience class='PROFESSIONAL EXPERIENCE'/>
       <hr class='divider'>
-      <Education />
+      <Education class='EDUCATION'/>
       <hr class='divider'>
-      <Skills />
+      <Skills class='SKILLS'/>
       <hr class='divider'>
-      <Achievements v-bind:content='content'/>
+      <Achievements class='ACHIEVEMENTS' v-bind:content='content'/>
       <hr class='divider'>
-      <Achievements v-bind:content='contentH'/>
+      <Achievements class='HACKATHON' v-bind:content='contentH'/>
     </div>
   </div>
 </template>
@@ -37,6 +37,7 @@
     },
     data() {
       return {
+        el: '#app',
         content: {
           title: 'achievements',
           achievements: [
@@ -67,7 +68,7 @@
           ] 
         },
         contentH: {
-          title: 'hackthon',
+          title: 'hackathon',
           achievements: [
             {
               award: 'united health group',
@@ -96,12 +97,18 @@
           ]
         },
       }
+    },
+    methods: {
+      getItemName(value) {
+        const ele = this.$el.getElementsByClassName(value)[0];
+        ele.scrollIntoView({behavior: 'smooth'});
+      }
     }
   }
 </script>
 
 <style scoped>
-  .app {
+  #app {
     display: flex;
     width: 100%;
   }
@@ -120,7 +127,7 @@
   }
 
   @media screen and (max-width: 900px) {
-    .app{
+    #app{
       flex-direction: column;
     }
     .contents {
