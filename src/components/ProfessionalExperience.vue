@@ -3,7 +3,7 @@
         <p class='title'><span style='color: #71c6dd'>PROFESSIONAL</span> EXPERIENCE</p>
         <div class='companyAndJoiningDate'>
             <p class='companyName'>{{toUppercase(companyName)}}, <span style='color: #71c6dd'>{{toUppercase(place)}}</span></p>
-            <p class='joiningDate'>{{joiningDate}} - <span style='color: #71c6dd'>Present</span></p>
+            <p class='joiningDate'>{{joiningDate}} - <span style='color: #71c6dd'>{{endingDate}}</span></p>
         </div>
         <p class='designation'>{{toUppercase(designation)}}</p>
         <ul class='work'>
@@ -17,19 +17,17 @@
         name: 'ProfessionalExperience',
         data() {
             return {
-                companyName: 'United Health Group',
-                place: 'Gurgaon',
-                joiningDate: '30 September 2019',
-                designation: 'Software Engineer',
-                work: ['Played a Full Stack Engineer role in all the projects Ive worked upon.',
-                        'Developed and designed three critical software for Behavioral Health.',
-                        'Helped team in designing and understanding the technical requirements of the projects, from the perspective of an architect.',
-                        'Worked on all the latest technologies in the market, including React, Azure Cloud, Camunda Engine etc.',
-                        'Practiced Micro-Products and Micro-Services.',
-                        'Agile Practitioner.',
-                        'Been a part of twenties of successful releases.',
-                        'Actively taken part in critical situations like war-rooms and priority incidents.',
-                        'Saved company a fortune and resolved a critical security threat, by submitting a bright idea every year.'
+                companyName: 'Alecado Systems',
+                place: 'Remote',
+                joiningDate: '1 May 2022',
+                endingDate: '31 May 2022',
+                designation: 'Web Developer Intern',
+                work: [
+                    'Worked with software development team members to design and develop robust solutions to meet the product requirements for functionality, scalability and performance.',
+                    'Helped team in designing and understanding the technical requirements of the projects, from the perspective of an architect.',
+                    'Worked on all the latest technologies in the market, including Reactjs, Nodejs, Html, Css.',
+                    'Actively taken part in all the situations wherever needed.',
+                    'Saved company a time and money by submitting a bright idea every week.',
                 ],
             }
         },

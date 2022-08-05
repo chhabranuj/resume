@@ -9,15 +9,15 @@
             <span style='color: #8b8b8b'> ~ </span>
             <span style='color: #71c6dd'>{{toUppercase(country)}}</span>
             <span style='color: #8b8b8b'> ~ </span>
-            <a href='tel:7217746275' style='color: white; text-decoration: none'>{{phoneNumber}}</a>
+            <a href='`${whatsapp}`' style='color: white; text-decoration: none'>{{phoneNumber}}</a>
             <span style='color: #8b8b8b'> ~ </span>
-            <a href='mailto:anujchhabra.work@gmail.com' style='color: #71c6dd; text-decoration: none'>{{toUppercase(email)}}</a>
+            <a href='`${mail}`' style='color: #71c6dd; text-decoration: none'>{{toUppercase(email)}}</a>
         </div>
         <p class='about'>{{about}}</p>
         <div class='externalLinks'>
             <a :href='`${github}`' target="_blank"><md-icon class='fa fa-github link'></md-icon></a>
             <a :href='`${linkedin}`' target="_blank"><md-icon class='fa fa-linkedin link' style='color:#71c6dd'></md-icon></a>
-            <a :href='`${website}`' target="_blank"><md-icon class='fa fa-globe link'></md-icon></a>
+            <a :href='`${mail}`' target="_blank"><md-icon class='fa fa-envelope link'></md-icon></a>
             <a :href='`${whatsapp}`' target="_blank"><md-icon class='fa fa-whatsapp link' style='color:#71c6dd'></md-icon></a>
         </div>
     </div>
@@ -38,7 +38,7 @@
                 about: 'Experienced software engineer with a passion for developing innovative programs that expedite the efficiency and effectiveness of organisational success. Well-versed in technology and writing code to create systems that are reliable and user-friendly. \n Confident communicator, strategic thinker, and innovative creator to develop software that is customised to meet a company’s organisational needs, highlight their core competencies, and further their success.',
                 github:'https://github.com/chhabranuj',
                 linkedin: 'https://www.linkedin.com/in/anuj-chhabra-b0b2a422a',
-                website: 'https://pendownonpaper.netlify.app',
+                mail: 'mailto:anujchhabra.work@gmail.com',
                 whatsapp: 'https://wa.me/+917217746275',
                 toUppercase(value) {
                     return value.toUpperCase();

@@ -1,12 +1,12 @@
 <template>
-    <div class='achievements' v-bind:class='getMobileHeightClass(data.title)'>
+    <div class='projects' v-bind:class='getMobileHeightClass(data.title)'>
         <p v-bind:class='getTitleClass(data.title)'>{{toUppercase(data.title)}}</p>
-        <div class='awards'  v-for='item in data.achievements' :key='item.description'>
+        <div class='awards'  v-for='item in data.projects' :key='item.description'>
             <div class='titleAndYear'>
-                <p v-bind:class='getAwardTitleClass(data.title)'>{{toUppercase(item.award)}}</p>
+                <p v-bind:class='getProjectNameClass(data.title)'>{{toUppercase(item.title)}}</p>
                 <p class='year'>{{item.year}}</p>
             </div>
-            <p v-bind:class='getFromClass(data.title)'>{{toUppercase(item.from)}}</p>
+            <a :href='`${item.url}`' target="_blank" v-bind:class='getUrlClass(data.title)'>{{item.url}}</a>
             <p class='description'>{{item.description}}</p>
         </div>
     </div>
@@ -14,7 +14,7 @@
 
 <script>
     export default {
-        name: 'Achievements',
+        name: 'Projects',
         props: [
             'content'
         ],
@@ -24,42 +24,42 @@
             }
         },
         beforeMount(){
-            this.data = JSON.parse(JSON.stringify(this.content))
+            this.data = JSON.parse(JSON.stringify(this.content));
         },
         methods: {
             toUppercase(value) {
                 return value.toUpperCase();
             },
             getTitleClass(value) {
-                if(value == 'achievements') {
+                if(value == 'projects') {
                     return 'title whiteTitle'
                 }
                 else {
                     return 'title blueTitle'
                 }
             },
-            getFromClass(value) {
-                if(value == 'achievements') {
-                    return 'from whiteTitle'
+            getUrlClass(value) {
+                if(value == 'projects') {
+                    return 'url whiteTitle'
                 }
                 else {
-                    return 'from blueTitle'
+                    return 'url blueTitle'
                 }
             },
-            getAwardTitleClass(value) {
-                if(value == 'achievements') {
-                    return 'awardTitle blueTitle'
+            getProjectNameClass(value) {
+                if(value == 'projects') {
+                    return 'projectName blueTitle'
                 }
                 else {
-                    return 'awardTitle whiteTitle'
+                    return 'projectName whiteTitle'
                 }
             },
             getMobileHeightClass(value) {
-                if(value == 'achievements') {
-                    return 'achievements'
+                if(value == 'projects') {
+                    return 'projects'
                 }
                 else {
-                    return 'achievements mobileHeight'
+                    return 'projects mobileHeight'
                 }
             }
 
@@ -71,7 +71,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Akshar&display=swap');
-    .achievements {
+    .projects {
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -100,7 +100,7 @@
         justify-content: space-between;
         align-items: center;
     }
-    .awardTitle {
+    .projectName {
         font-family: 'Poppins', sans-serif;
         font-size: 25px;
         margin-bottom: 5px;
@@ -108,7 +108,7 @@
     .year {
         font-family: 'Open Sans', sans-serif;
     }
-    .from {
+    .url {
         font-family: 'Open Sans', sans-serif;
         font-size: 20px;
         font-weight: bold;
@@ -126,7 +126,7 @@
         width: 100%;
     }
     @media screen and (max-width: 900px) {
-        .achievements {
+        .projects {
             min-height: auto;
             padding: 25% 0;
         }
@@ -141,7 +141,7 @@
             align-items: flex-start;
             flex-direction: column;
         }
-        .awardTitle {
+        .projectName {
             font-size: 20px;
         }
         .description {
@@ -151,10 +151,10 @@
             font-weight: bold;
             font-size: 15px;
         }
-        .from {
+        .url {
             font-size: 18px;
         }
-        .fromHackathonMobile {
+        .urlHackathonMobile {
             color: white;
         }
         .description {

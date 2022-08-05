@@ -25,7 +25,7 @@
                 clicked: 'ABOUT ME',
                 firstName: 'Anuj',
                 lastName: 'Chhabra',
-                content: ['ABOUT ME', 'PROFESSIONAL \n EXPERIENCE', 'EDUCATION', 'SKILLS', 'ACHIEVEMENTS', 'HACKATHON'],
+                content: ['ABOUT ME', 'PROFESSIONAL \n EXPERIENCE', 'EDUCATION', 'SKILLS', 'PROJECTS'],
                 menuIsOpen: false,
             }
         },

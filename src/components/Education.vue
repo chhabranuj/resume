@@ -18,8 +18,8 @@
                 collegeName: 'delhi technical campus',
                 universityName: 'ggsipu',
                 state: 'delhi',
-                startingYear: '2015',
-                finalYear: '2019',
+                startingYear: '2020',
+                finalYear: '2024',
                 degree: 'bachelor of technology in computer science',
                 about: 'BTech CSE is a 4 year UG course that studies practical and theoretical knowledge of computer hardware and software. This course lays emphasis on the basics of computer programming and networking while also comprising a plethora of topics.',
                 toUppercase(value) {

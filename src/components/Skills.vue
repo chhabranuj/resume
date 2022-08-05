@@ -21,11 +21,10 @@
         name: 'Skills',
         data() {
             return {
-                technologies: ['React JS', 'Angular JS', 'Spring Framework', 'Node.js', 'Python', 'Android Studio Native', 'Flutter', 'GraphQL', 'SQL', 'PostgreSQL', 'AWS', 'Azure Cloud', 'Google Cloud Platform', 'IBM Cloud'],
+                technologies: ['React JS', 'Angular JS', 'Node.js', 'Vue JS', 'Next JS', 'GraphQL', 'MongoDB', 'AWS', 'Pyhton', 'Java', 'Javascript'],
                 workflow: ['Get the product details from the client.',
                             'Develop & Design the Product.',
-                            'Work arounds for in-change.',
-                            'Agile Development & Scrum'
+                            'Work arounds for in-change.'
                 ],
             }
         }
