@@ -9,7 +9,7 @@
         <span style="color: #71c6dd">{{ toUppercase(data.place) }}</span>
       </p>
       <p class="joiningDate">
-        {{ data.joiningDate }} -
+        {{ data.joiningDate }} ~
         <span style="color: #71c6dd">{{ data.endingDate }}</span>
       </p>
     </div>
@@ -95,6 +95,7 @@ export default {
   line-height: 1.5;
   text-align: justify;
   color: white;
+  font-weight: 300;
 }
 @media screen and (max-width: 900px) {
   .professionalExperience {

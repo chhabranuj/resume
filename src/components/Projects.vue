@@ -7,11 +7,17 @@
           {{ toUppercase(item.title) }}
         </p>
         <p class="time">
-          <span>{{ item.startDate }} - </span>
+          <span>{{ item.startDate }} ~ </span>
           <span style="color: #71c6dd">{{ item.endDate }}</span>
         </p>
       </div>
-      <a class="url" :href="`${item.url}`" target="_blank">{{ item.url }}</a>
+      <a class="url" :href="`${item.url}`" target="_blank"
+        ><md-icon
+          class="fa fa-external-link"
+          style="color: #71c6dd; margin-right: 10px"
+        ></md-icon
+        >{{ item.url }}</a
+      >
       <ul>
         <li
           style="color: #71c6dd; margin: 10px 0"
@@ -81,16 +87,18 @@ export default {
 }
 .url {
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: medium;
+  font-weight: bolder;
   margin-top: 5px;
-  color: rgba(255, 255, 255, 0.6);
+  color: white;
+  text-decoration: none;
 }
 
 .url:hover {
   color: #71c6dd;
 }
 .description {
+  font-weight: 300;
   color: white;
   width: 75%;
   font-family: "Open Sans", sans-serif;

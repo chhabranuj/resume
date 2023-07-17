@@ -8,7 +8,13 @@
         </p>
         <p class="time">{{ item.date }}</p>
       </div>
-      <a class="url" :href="`${item.url}`" target="_blank">Certificate Link</a>
+      <a class="url" :href="`${item.url}`" target="_blank"
+        ><md-icon
+          class="fa fa-external-link"
+          style="color: white; margin-right: 10px"
+        ></md-icon
+        >Certificate Link</a
+      >
       <ul>
         <li
           style="color: #71c6dd; margin: 10px 0"
@@ -42,7 +48,7 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Akshar&display=swap");
 .certificates {
   display: flex;
@@ -79,13 +85,14 @@ export default {
 }
 .url {
   font-family: "Open Sans", sans-serif;
-  font-weight: bold;
+  font-weight: 500;
   margin-top: 5px;
-  color: rgba(255, 255, 255, 0.6);
+  color: #71c6dd;
+  text-decoration: none;
 }
 
 .url:hover {
-  color: #71c6dd;
+  color: white;
 }
 .description {
   color: white;
@@ -93,6 +100,7 @@ export default {
   font-family: "Open Sans", sans-serif;
   white-space: pre-line;
   font-size: medium;
+  font-weight: 300;
   letter-spacing: 1px;
   line-height: 1.5;
   text-align: justify;

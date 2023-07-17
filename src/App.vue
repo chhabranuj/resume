@@ -180,7 +180,7 @@ export default {
             title: "amazon clone",
             url: "https://projectamazon.netlify.app/",
             startDate: "May 2022",
-            endDate: "JUne 2022",
+            endDate: "June 2022",
             description: [
               "The Amazon Clone website that I created is a read-only replica of the popular e-commerce platform, Amazon.",
               "While users can browse and explore a wide range of products and categories that are added by the admin from Amazon-Admin Website.",
@@ -266,7 +266,8 @@ export default {
         ],
         volunteerings: [
           {
-            title: "gdsc - web development head",
+            institute: "gdsc",
+            position: "web development head",
             company: "OpenWeaver",
             startDate: "Aug 2022",
             endDate: "July 2023",
@@ -277,7 +278,8 @@ export default {
             ],
           },
           {
-            title: "cesta - tech team associate",
+            institute: "cesta",
+            position: "tech team associate",
             company: "OpenWeaver",
             startDate: "Aug 2021",
             endDate: "June 2022",
@@ -288,7 +290,8 @@ export default {
             ],
           },
           {
-            title: "cesta - tech team member",
+            institute: "cesta",
+            position: "tech team member",
             company: "OpenWeaver",
             startDate: "Jan 2021",
             endDate: "July 2021",

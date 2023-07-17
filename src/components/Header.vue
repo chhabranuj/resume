@@ -18,6 +18,10 @@
       </div>
     </div>
     <a href="/AnujChhabra_Resume.pdf" target="_blank" class="downloadResume">
+      <md-icon
+        class="fa fa-link"
+        style="color: #71c6dd; margin-right: 10px"
+      ></md-icon>
       <p>
         View <span style="color: #71c6dd">Resume </span
         ><span style="font-size: x-small">(pdf)</span>
@@ -33,9 +37,9 @@
       </p>
       <md-icon class="fa fa-bars menu" @click="toggleMenu()"></md-icon>
     </div>
-    <hr class="divider" />
     <transition name="fade">
       <div class="mediaContents" v-if="menuIsOpen">
+        <hr class="divider" />
         <ul class="conentList">
           <li
             class="mediaContent contents"
@@ -52,6 +56,10 @@
           target="_blank"
           class="downloadResume"
         >
+          <md-icon
+            class="fa fa-link"
+            style="color: #71c6dd; margin-right: 10px"
+          ></md-icon>
           <p>
             View <span style="color: #71c6dd">Resume </span
             ><span style="font-size: x-small">(pdf)</span>
@@ -183,20 +191,20 @@ export default {
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    padding: 0 2%;
+    padding: 0 4%;
     color: white;
     background-color: #51546e;
     top: 0;
     z-index: 1000;
     position: fixed;
-    width: 96%;
+    width: 92%;
   }
   .mediaTitleAndMenu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 8vh;
+    height: 10vh;
   }
   .title {
     font-family: "Poppins", sans-serif;

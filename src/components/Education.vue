@@ -9,7 +9,7 @@
           <span style="color: #71c6dd">{{ toUppercase(item.state) }}</span>
         </p>
         <p class="years">
-          <span style="color: #71c6dd">{{ item.startingYear }}</span> -
+          <span style="color: #71c6dd">{{ item.startingYear }}</span> ~
           {{ item.finalYear }}
         </p>
       </div>
@@ -97,6 +97,7 @@ export default {
   letter-spacing: 1px;
   line-height: 1.5;
   text-align: justify;
+  font-weight: 300;
 }
 @media screen and (max-width: 900px) {
   .education {

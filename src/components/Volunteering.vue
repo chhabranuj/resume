@@ -4,10 +4,11 @@
     <div class="awards" v-for="item in data" :key="item.description">
       <div class="titleAndTime">
         <p class="projectName">
-          {{ toUppercase(item.title) }}
+          {{ toUppercase(item.institute) }} -
+          <span style="color: white">{{ toUppercase(item.position) }}</span>
         </p>
         <p class="time">
-          {{ item.startDate }} -
+          {{ item.startDate }} ~
           <span style="color: #71c6dd">{{ item.endDate }}</span>
         </p>
       </div>
@@ -87,6 +88,7 @@ export default {
   letter-spacing: 1px;
   line-height: 1.5;
   text-align: justify;
+  font-weight: 300;
 }
 .divider {
   border: 0;

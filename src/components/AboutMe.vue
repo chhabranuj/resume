@@ -98,6 +98,7 @@ a:hover {
   line-height: 1.5;
   text-align: justify;
   margin: 50px 0;
+  font-weight: 300;
 }
 .externalLinks {
   display: flex;
