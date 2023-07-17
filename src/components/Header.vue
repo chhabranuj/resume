@@ -17,11 +17,7 @@
         </p>
       </div>
     </div>
-    <a
-      href="/src/assets/AnujChhabra_Resume.pdf"
-      target="_blank"
-      class="downloadResume"
-    >
+    <a href="/AnujChhabra_Resume.pdf" target="_blank" class="downloadResume">
       <p>
         View <span style="color: #71c6dd">Resume </span
         ><span style="font-size: x-small">(pdf)</span>
