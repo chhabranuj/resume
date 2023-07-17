@@ -72,6 +72,7 @@ export default {
           joiningDate: "May 2022",
           endingDate: "June 2022",
           designation: "Web Developer Intern",
+          url: "https://aiverse.netlify.app",
           work: [
             "Worked with software development team members to design and develop robust solutions to meet the product requirements for functionality, scalability and performance.",
             "Helped team in designing and understanding the technical requirements of the projects, from the perspective of an architect.",

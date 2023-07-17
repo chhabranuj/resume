@@ -11,13 +11,13 @@
           <span style="color: #71c6dd">{{ item.endDate }}</span>
         </p>
       </div>
-      <a class="url" :href="`${item.url}`" target="_blank"
-        ><md-icon
+      <p class="url" @click="redirect(item.url)">
+        <md-icon
           class="fa fa-external-link"
-          style="color: #71c6dd; margin-right: 10px"
-        ></md-icon
-        >{{ item.url }}</a
-      >
+          style="color: #71c6dd; margin-right: 10px; margin-top: 5px"
+        ></md-icon>
+        {{ item.url }}
+      </p>
       <ul>
         <li
           style="color: #71c6dd; margin: 10px 0"
@@ -45,6 +45,11 @@ export default {
   },
   beforeMount() {
     this.data = JSON.parse(JSON.stringify(this.projects));
+  },
+  methods: {
+    redirect(url) {
+      window.open(url);
+    },
   },
 };
 </script>
@@ -89,9 +94,13 @@ export default {
   font-family: "Open Sans", sans-serif;
   font-size: medium;
   font-weight: bolder;
-  margin-top: 5px;
+  margin: 0;
   color: white;
-  text-decoration: none;
+  width: 85%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
 .url:hover {

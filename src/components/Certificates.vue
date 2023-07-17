@@ -13,7 +13,7 @@
           class="fa fa-external-link"
           style="color: white; margin-right: 10px"
         ></md-icon
-        >Certificate Link</a
+        >Certificate</a
       >
       <ul>
         <li

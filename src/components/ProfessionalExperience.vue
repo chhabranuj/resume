@@ -14,6 +14,13 @@
       </p>
     </div>
     <p class="designation">{{ toUppercase(data.designation) }}</p>
+    <p class="url" @click="redirect(data.url)">
+      <md-icon
+        class="fa fa-external-link"
+        style="color: #71c6dd; margin-right: 10px; margin-top: 5px"
+      ></md-icon>
+      {{ data.url }}
+    </p>
     <ul class="work">
       <li
         style="color: #71c6dd; margin: 10px 0"
@@ -40,6 +47,11 @@ export default {
   },
   beforeMount() {
     this.data = JSON.parse(JSON.stringify(this.professionalExperience));
+  },
+  methods: {
+    redirect(url) {
+      window.open(url);
+    },
   },
 };
 </script>
@@ -78,11 +90,29 @@ export default {
   font-family: "Open Sans", sans-serif;
 }
 .designation {
-  margin-top: 0;
+  margin: 0;
+  margin-bottom: 4px;
   font-family: "Akshar", sans-serif;
   letter-spacing: 2px;
   font-size: 22px;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.url {
+  font-family: "Open Sans", sans-serif;
+  font-size: medium;
+  font-weight: bolder;
+  margin: 0;
+  color: white;
+  width: 85%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.url:hover {
+  color: #71c6dd;
 }
 .work {
   margin-top: 10px;
