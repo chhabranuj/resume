@@ -129,13 +129,6 @@ export default {
   .projectName {
     font-size: 20px;
   }
-  .description {
-    font-family: "Open Sans", sans-serif;
-    line-height: 1.5;
-    letter-spacing: 1px;
-    font-weight: bold;
-    font-size: 15px;
-  }
   .url {
     font-size: 18px;
   }

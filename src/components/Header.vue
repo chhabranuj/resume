@@ -52,7 +52,7 @@
           </li>
         </ul>
         <a
-          href="/src/assets/AnujChhabra_Resume.pdf"
+          href="/AnujChhabra_Resume.pdf"
           target="_blank"
           class="downloadResume"
         >
