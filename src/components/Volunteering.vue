@@ -1,25 +1,23 @@
 <template>
-  <div class="education">
-    <p class="title">EDUCATION</p>
-    <div class="educationDetailsParent" v-for="item in data" :key="item.degree">
-      <div class="educationDetails">
-        <p class="institute">
-          <span style="color: #71c6dd">{{ toUppercase(item.institute) }}</span
-          >, {{ toUppercase(item.universityName) }},
-          <span style="color: #71c6dd">{{ toUppercase(item.state) }}</span>
+  <div class="volunteerings">
+    <p class="title">VOLUNTEERINGS</p>
+    <div class="awards" v-for="item in data" :key="item.description">
+      <div class="titleAndTime">
+        <p class="projectName">
+          {{ toUppercase(item.title) }}
         </p>
-        <p class="years">
-          <span style="color: #71c6dd">{{ item.startingYear }}</span> -
-          {{ item.finalYear }}
+        <p class="time">
+          {{ item.startDate }} -
+          <span style="color: #71c6dd">{{ item.endDate }}</span>
         </p>
       </div>
-      <p class="degree">
-        {{ toUppercase(item.degree) }}
-        <span style="color: white">{{ item.grade }}</span>
-      </p>
       <ul>
-        <li style="color: #71c6dd">
-          <span class="description">{{ item.description }}</span>
+        <li
+          style="color: #71c6dd; margin: 10px 0"
+          v-for="items in item.description"
+          :key="items"
+        >
+          <span class="description">{{ items }}</span>
         </li>
       </ul>
     </div>
@@ -28,8 +26,8 @@
 
 <script>
 export default {
-  name: "EducationLayout",
-  props: ["education"],
+  name: "VolunteeringLayout",
+  props: ["volunteerings"],
   data() {
     return {
       data: {},
@@ -39,7 +37,7 @@ export default {
     };
   },
   beforeMount() {
-    this.data = JSON.parse(JSON.stringify(this.education));
+    this.data = JSON.parse(JSON.stringify(this.volunteerings));
   },
 };
 </script>
@@ -48,12 +46,12 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Akshar&display=swap");
-.education {
+.volunteerings {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  margin: 0 5%;
+  margin: 5%;
   min-height: 100vh;
   color: white;
 }
@@ -62,34 +60,26 @@ export default {
   font-size: 45px;
   margin: 0 0 20px 0;
 }
-
-.educationDetailsParent {
+.awards {
+  margin: 8px 0;
   width: 100%;
-  margin: 15px 0;
 }
-.educationDetails {
+.titleAndTime {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
-.institute {
+.projectName {
   font-family: "Poppins", sans-serif;
-  font-size: 28px;
-  margin: 0;
+  font-size: 25px;
+  margin-bottom: 5px;
+  color: #71c6dd;
 }
-.years {
+.time {
   font-family: "Open Sans", sans-serif;
 }
-.degree {
-  margin: 0 0 20px 0;
-  font-family: "Akshar", sans-serif;
-  letter-spacing: 1px;
-  font-size: 22px;
-  color: rgba(255, 255, 255, 0.6);
-}
-
 .description {
+  width: 75%;
   color: white;
   font-family: "Open Sans", sans-serif;
   white-space: pre-line;
@@ -98,21 +88,37 @@ export default {
   line-height: 1.5;
   text-align: justify;
 }
+.divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
 @media screen and (max-width: 900px) {
-  .education {
-    padding: 25% 0;
+  .volunteerings {
     min-height: auto;
+    padding: 25% 0;
+  }
+  .mobileHeight {
+    padding-bottom: 15%;
   }
   .title {
     font-size: 35px;
-    margin: 0 0 25px 0;
+    margin: 0 0 15px 0;
   }
-  .educationDetails {
+  .titleAndTime {
     align-items: flex-start;
     flex-direction: column;
   }
-  .degree {
-    font-size: 22px;
+  .projectName {
+    font-size: 20px;
+  }
+  .description {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 15px;
+    width: 100%;
   }
 }
 </style>

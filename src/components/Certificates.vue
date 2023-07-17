@@ -1,17 +1,14 @@
 <template>
-  <div class="projects">
-    <p class="title">PROJECTS</p>
+  <div class="certificates">
+    <p class="title">CERTIFICATES</p>
     <div class="awards" v-for="item in data" :key="item.description">
       <div class="titleAndTime">
         <p class="projectName">
           {{ toUppercase(item.title) }}
         </p>
-        <p class="time">
-          <span>{{ item.startDate }} - </span>
-          <span style="color: #71c6dd">{{ item.endDate }}</span>
-        </p>
+        <p class="time">{{ item.date }}</p>
       </div>
-      <a class="url" :href="`${item.url}`" target="_blank">{{ item.url }}</a>
+      <a class="url" :href="`${item.url}`" target="_blank">Certificate Link</a>
       <ul>
         <li
           style="color: #71c6dd; margin: 10px 0"
@@ -27,8 +24,8 @@
 
 <script>
 export default {
-  name: "ProjectsLayout",
-  props: ["projects"],
+  name: "CertificatesLayout",
+  props: ["certificates"],
   data() {
     return {
       data: {},
@@ -38,7 +35,7 @@ export default {
     };
   },
   beforeMount() {
-    this.data = JSON.parse(JSON.stringify(this.projects));
+    this.data = JSON.parse(JSON.stringify(this.certificates));
   },
 };
 </script>
@@ -47,7 +44,7 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Akshar&display=swap");
-.projects {
+.certificates {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -60,6 +57,7 @@ export default {
   font-family: "Poppins", sans-serif;
   font-size: 45px;
   margin: 0 0 20px 0;
+  color: #71c6dd;
 }
 .awards {
   margin: 8px 0;
@@ -74,14 +72,13 @@ export default {
   font-family: "Poppins", sans-serif;
   font-size: 25px;
   margin-bottom: 5px;
-  color: #71c6dd;
 }
 .time {
+  color: #71c6dd;
   font-family: "Open Sans", sans-serif;
 }
 .url {
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
   font-weight: bold;
   margin-top: 5px;
   color: rgba(255, 255, 255, 0.6);
@@ -106,7 +103,7 @@ export default {
   width: 100%;
 }
 @media screen and (max-width: 900px) {
-  .projects {
+  .certificates {
     min-height: auto;
     padding: 25% 0;
   }
