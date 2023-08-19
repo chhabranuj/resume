@@ -66,21 +66,37 @@ export default {
           mail: "mailto:anujchhabra.work@gmail.com",
           whatsapp: "https://wa.me/+917217746275",
         },
-        professionalExperience: {
-          companyName: "Alecado Systems",
-          place: "Remote",
-          joiningDate: "May 2022",
-          endingDate: "June 2022",
-          designation: "Web Developer Intern",
-          url: "https://aiverse.netlify.app",
-          work: [
-            "Worked with software development team members to design and develop robust solutions to meet the product requirements for functionality, scalability and performance.",
-            "Helped team in designing and understanding the technical requirements of the projects, from the perspective of an architect.",
-            "Worked on all the latest technologies in the market, including Reactjs, Nodejs, Html, Css.",
-            "Actively taken part in all the situations wherever needed.",
-            "Saved company a time and money by submitting a bright idea every week.",
-          ],
-        },
+        professionalExperience: [
+          {
+            companyName: "TechnoHacks",
+            place: "Remote",
+            joiningDate: "June 2023",
+            endingDate: "July 2023",
+            designation: "Web Developer",
+            url: "https://chhabranuj.netlify.app",
+            work: [
+              "Design, develop, and maintain websites and web applications. Create user-friendly interfaces and ensure a seamless user experience.",
+              "Develop the visual elements and user interface of websites. Write clean, efficient HTML, CSS, JavaScript in React.",
+              "Work closely with designers, UX/UI specialists, and other developers to bring designs to life. Collaborate with cross-functional teams to define project requirements and goals.",
+              "Identify and troubleshoot technical issues, bugs, and other challenges. Find creative solutions to optimize website performance and user experience.",
+            ],
+          },
+          {
+            companyName: "Alecado Systems",
+            place: "Remote",
+            joiningDate: "May 2022",
+            endingDate: "June 2022",
+            designation: "Web Developer Intern",
+            url: "https://aiverse.netlify.app",
+            work: [
+              "Worked with software development team members to design and develop robust solutions to meet the product requirements for functionality, scalability and performance.",
+              "Helped team in designing and understanding the technical requirements of the projects, from the perspective of an architect.",
+              "Worked on all the latest technologies in the market, including Reactjs, Nodejs, Html, Css.",
+              "Actively taken part in all the situations wherever needed.",
+              "Saved company a time and money by submitting a bright idea every week.",
+            ],
+          },
+        ],
         education: [
           {
             institute: "delhi technical campus",
@@ -235,7 +251,7 @@ export default {
             title: "Basics of javaScript Programming",
             company: "OpenWeaver",
             url: "https://drive.google.com/file/d/1G3xc_8RAIJC_ye4HCQzXAyvnrqFsNn3G/view?usp=drivesdk",
-            date: "June 2021",
+            date: "June 2023",
             description: [
               "The Basics of JavaScript Programming course provides a solid foundation in JavaScript, one of the most widely used programming languages for web development.",
               "During the course, I learned essential concepts such as variables, data types, operators, functions, and control flow.",
@@ -246,7 +262,7 @@ export default {
             title: "TCS iON Career Edge - Young Professional",
             company: "TCS iON",
             url: "https://drive.google.com/file/d/1T56sxm-GV6Ak_YK5cX-3R4Z8inEoz16K/view?usp=drivesdk",
-            date: "June 2021",
+            date: "June 2023",
             description: [
               "The TCS iON Career Edge - Young Professional course is an all-encompassing program that I recently completed, which has significantly enriched my skills and knowledge as a young professional.",
               "Developed by the renowned Tata Consultancy Services (TCS), this course provides a comprehensive curriculum tailored to meet the demands of today's dynamic business and technology landscape.",
@@ -257,7 +273,7 @@ export default {
             title: "Basics of HTML/CSS",
             company: "OpenWeaver",
             url: "https://drive.google.com/file/d/1JG2cDx1apfna1eGtdHn4z7xFQeS6wyLy/view?usp=drivesdk",
-            date: "April 2021",
+            date: "April 2023",
             description: [
               "The HTML/CSS course I completed was an essential stepping stone in my journey as a web developer.",
               "This comprehensive program focused on the fundamentals of HTML (Hypertext Markup Language) and CSS (Cascading Style Sheets) – the backbone of web development.",
@@ -269,7 +285,6 @@ export default {
           {
             institute: "gdsc",
             position: "web development head",
-            company: "OpenWeaver",
             startDate: "Aug 2022",
             endDate: "July 2023",
             description: [
@@ -281,7 +296,6 @@ export default {
           {
             institute: "cesta",
             position: "tech team associate",
-            company: "OpenWeaver",
             startDate: "Aug 2021",
             endDate: "June 2022",
             description: [
@@ -293,7 +307,6 @@ export default {
           {
             institute: "cesta",
             position: "tech team member",
-            company: "OpenWeaver",
             startDate: "Jan 2021",
             endDate: "July 2021",
             description: [

@@ -3,33 +3,39 @@
     <p class="title">
       <span style="color: #71c6dd">PROFESSIONAL</span> EXPERIENCE
     </p>
-    <div class="companyAndJoiningDate">
-      <p class="companyName">
-        {{ toUppercase(data.companyName) }},
-        <span style="color: #71c6dd">{{ toUppercase(data.place) }}</span>
+    <div
+      class="professionalExperienceChild"
+      v-for="item in data"
+      :key="item.companyName"
+    >
+      <div class="companyAndJoiningDate">
+        <p class="companyName">
+          {{ toUppercase(item.companyName) }},
+          <span style="color: #71c6dd">{{ toUppercase(item.place) }}</span>
+        </p>
+        <p class="joiningDate">
+          {{ item.joiningDate }} ~
+          <span style="color: #71c6dd">{{ item.endingDate }}</span>
+        </p>
+      </div>
+      <p class="designation">{{ toUppercase(item.designation) }}</p>
+      <p class="url" @click="redirect(item.url)">
+        <md-icon
+          class="fa fa-external-link"
+          style="color: #71c6dd; margin-right: 10px; margin-top: 5px"
+        ></md-icon>
+        {{ item.url }}
       </p>
-      <p class="joiningDate">
-        {{ data.joiningDate }} ~
-        <span style="color: #71c6dd">{{ data.endingDate }}</span>
-      </p>
+      <ul class="work">
+        <li
+          style="color: #71c6dd; margin: 10px 0"
+          v-for="item in item.work"
+          :key="item"
+        >
+          <span class="workContent">{{ item }}</span>
+        </li>
+      </ul>
     </div>
-    <p class="designation">{{ toUppercase(data.designation) }}</p>
-    <p class="url" @click="redirect(data.url)">
-      <md-icon
-        class="fa fa-external-link"
-        style="color: #71c6dd; margin-right: 10px; margin-top: 5px"
-      ></md-icon>
-      {{ data.url }}
-    </p>
-    <ul class="work">
-      <li
-        style="color: #71c6dd; margin: 10px 0"
-        v-for="item in data.work"
-        :key="item"
-      >
-        <span class="workContent">{{ item }}</span>
-      </li>
-    </ul>
   </div>
 </template>
 
@@ -73,6 +79,10 @@ export default {
   font-family: "Poppins", sans-serif;
   font-size: 45px;
   margin: 0 0 20px 0;
+}
+
+.professionalExperienceChild {
+  margin-bottom: 2rem;
 }
 .companyAndJoiningDate {
   display: flex;
