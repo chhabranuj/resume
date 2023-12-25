@@ -4,10 +4,7 @@
     <div class="contents">
       <AboutMe class="ABOUT ME" :about="content.about" />
       <hr class="divider" />
-      <ProfessionalExperience
-        class="PROFESSIONAL EXPERIENCE"
-        :professionalExperience="content.professionalExperience"
-      />
+      <ProfessionalExperience class="PROFESSIONAL EXPERIENCE" :professionalExperience="content.professionalExperience" />
       <hr class="divider" />
       <Education class="EDUCATION" :education="content.education" />
       <hr class="divider" />
@@ -17,10 +14,7 @@
       <hr class="divider" />
       <Certificates class="CERTIFICATES" :certificates="content.certificates" />
       <hr class="divider" />
-      <Volunteerings
-        class="VOLUTEERINGS"
-        :volunteerings="content.volunteerings"
-      />
+      <Volunteerings class="VOLUTEERINGS" :volunteerings="content.volunteerings" />
     </div>
   </div>
 </template>
@@ -62,23 +56,37 @@ export default {
           about:
             "A final year B.Tech CSE student with a passion for web development, backed by valuable experience in creating innovative and interactive websites. Proficient in front-end technologies and well-versed in using various frameworks and libraries to build responsive and user-friendly interfaces. \n\nDemonstrated ability to work on diverse projects, honing problem-solving and teamwork skills. Through a combination of academic excellence and hands-on experience, I have developed a deep understanding of web development principles and is excited to embark on a fulfilling career in the tech industry, bringing creativity and technical expertise to any team or organization.",
           github: "https://github.com/chhabranuj",
-          linkedin: "https://www.linkedin.com/in/anuj-chhabra-b0b2a422a",
+          linkedin: "https://www.linkedin.com/in/chhabranuj",
           mail: "mailto:anujchhabra.work@gmail.com",
           whatsapp: "https://wa.me/+917217746275",
         },
         professionalExperience: [
+          {
+            companyName: "Orsoot LLP",
+            place: "Remote",
+            joiningDate: "Sept 2023",
+            endingDate: "Oct 2023",
+            designation: "Vue.js Developer",
+            url: "https://drive.google.com/file/d/1t-9no9P7dl1MOGUmSfRuEpIADKMywrID/view?usp=drivesdk",
+            work: [
+              "Design, develop, and maintain websites and web applications. Create user-friendly interfaces and ensure a seamless user experience.",
+              "Develop the visual elements and user interface of websites. Write clean, efficient HTML, CSS, JavaScript in React and Vue.",
+              "Work closely with designers, UX/UI specialists, and other developers to bring designs to life. Collaborate with cross-functional teams to define project requirements and goals.",
+              "Identify and troubleshoot technical issues, bugs, and other challenges. Find creative solutions to optimize website performance and user experience.",
+            ],
+          },
           {
             companyName: "TechnoHacks",
             place: "Remote",
             joiningDate: "June 2023",
             endingDate: "July 2023",
             designation: "Web Developer",
-            url: "https://chhabranuj.netlify.app",
+            url: "https://drive.google.com/file/d/1t64JWJBqLjIXiiYvNqoXaXahxDD9ID9f/view?usp=drivesdk",
             work: [
-              "Design, develop, and maintain websites and web applications. Create user-friendly interfaces and ensure a seamless user experience.",
-              "Develop the visual elements and user interface of websites. Write clean, efficient HTML, CSS, JavaScript in React.",
-              "Work closely with designers, UX/UI specialists, and other developers to bring designs to life. Collaborate with cross-functional teams to define project requirements and goals.",
-              "Identify and troubleshoot technical issues, bugs, and other challenges. Find creative solutions to optimize website performance and user experience.",
+              "Worked on three projects during my internship period.",
+              "Created web applications using Html, Css, Javascript in React.",
+              "The projects that I have worked on includes a fully working calculator with advance formulas used in applied and computational mathematics.",
+              "Also worked on the currency converter, that converts currency with real time data. This application includes more than 100 cuntries and used an api integration that gives real time data."
             ],
           },
           {
@@ -87,7 +95,7 @@ export default {
             joiningDate: "May 2022",
             endingDate: "June 2022",
             designation: "Web Developer Intern",
-            url: "https://aiverse.netlify.app",
+            url: "https://drive.google.com/file/d/1t5J_xQWgjS38Aas84SwdXFDHrgHH9aTa/view?usp=drivesdk",
             work: [
               "Worked with software development team members to design and develop robust solutions to meet the product requirements for functionality, scalability and performance.",
               "Helped team in designing and understanding the technical requirements of the projects, from the perspective of an architect.",
@@ -105,7 +113,7 @@ export default {
             startingYear: "2020",
             finalYear: "2024",
             degree: "bachelor of technology in computer science",
-            grade: "(91%)",
+            grade: "(90.3%)",
             description:
               "A Bachelor of Technology (B.Tech) in Computer Science is a popular undergraduate degree program that focuses on the principles and applications of computer science and technology. During the course, students delve into various facets of computing, including programming languages, algorithms, data structures, software engineering, database management, artificial intelligence, and networking.",
           },
@@ -155,8 +163,21 @@ export default {
         },
         projects: [
           {
+            title: "exam crafter",
+            url: "https://youtu.be/v-Qv4SH9jSo",
+            startDate: "Sept 2023",
+            endDate: "Dec 2023",
+            description: [
+              "Exam Crafter is a personalized secure framework for exam preperation using AI.",
+              "Exam Crafter is a digital exam preparation website that uses artificial intelligence (AI) to generate personalized questions and practice exams for a variety of subjects and exams.",
+              "Our Al-powered question bank is constantly being updated with new and challenging questions, so you can be sure that you're getting the best possible preparation.",
+              "With Exam Crafter, you can prepare for your exams in a way that is tailored to your individual needs",
+              "Technology Used:- Next.js, Next-Auth, Docker, MongoDB.",
+            ],
+          },
+          {
             title: "onehowl",
-            url: "https://onehowl.vercel.app/",
+            url: "https://github.com/chhabranuj/onehowl",
             startDate: "Nov 2022",
             endDate: "Dec 2022",
             description: [
@@ -169,7 +190,7 @@ export default {
           },
           {
             title: "hitchdoc",
-            url: "https://hitchdoc.vercel.app/",
+            url: "https://github.com/chhabranuj/hitchdoc",
             startDate: "July 2022",
             endDate: "Aug 2022",
             description: [
@@ -182,7 +203,7 @@ export default {
           },
           {
             title: "amazon admin clone",
-            url: "https://projectamazon-admin.netlify.app/",
+            url: "https://github.com/chhabranuj/amazon-admin-clone",
             startDate: "May 2022",
             endDate: "June 2022",
             description: [
@@ -195,7 +216,7 @@ export default {
           },
           {
             title: "amazon clone",
-            url: "https://projectamazon.netlify.app/",
+            url: "https://github.com/chhabranuj/amazon-clone",
             startDate: "May 2022",
             endDate: "June 2022",
             description: [
@@ -221,7 +242,7 @@ export default {
           },
           {
             title: "pen down on paper",
-            url: "https://pendownonpaper.netlify.app/",
+            url: "https://github.com/chhabranuj/pendownonpaper",
             startDate: "Jan 2022",
             endDate: "Feb 2022",
             description: [
@@ -333,14 +354,17 @@ export default {
   display: flex;
   width: 100%;
 }
+
 .contents {
   width: calc(100% - 300px);
   height: 100vh;
   overflow-y: scroll;
 }
+
 .contents::-webkit-scrollbar {
   display: none;
 }
+
 .divider {
   border: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -351,10 +375,12 @@ export default {
   #app {
     flex-direction: column;
   }
+
   .contents {
     width: 100%;
     height: auto;
   }
+
   .divider {
     width: 100%;
   }
